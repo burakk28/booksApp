@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tZn-8Q-bMC">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Merriweather-Black.ttf">
+            <string>Merriweather-Black</string>
+        </array>
+        <array key="Merriweather-Regular.ttf">
+            <string>Merriweather-Regular</string>
+        </array>
+        <array key="Mulish-Bold.ttf">
+            <string>Mulish-Bold</string>
+        </array>
+        <array key="Mulish-Regular.ttf">
+            <string>Mulish-Regular</string>
+        </array>
+        <array key="Mulish-SemiBold.ttf">
+            <string>Mulish-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeController" customModule="booksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQa-Lg-aAM">
+                                <rect key="frame" x="10" y="44" width="74" height="25.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Black" family="Merriweather" pointSize="20"/>
+                                <color key="textColor" name="customMerriBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nbx-zQ-0nL">
+                                <rect key="frame" x="0.0" y="72.666666666666657" width="393" height="396.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="25x-7q-quN">
+                                    <size key="itemSize" width="143" height="283"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="hs5-Bx-Ic2" customClass="CollectionViewCell" customModule="booksApp" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="57" width="143" height="283"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HgB-uC-dss">
+                                            <rect key="frame" x="0.0" y="0.0" width="143" height="283"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="143" height="283"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="qca-GI-sSa"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7jH-91-E5M"/>
+                                </connections>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYn-Zj-7Gs">
+                                <rect key="frame" x="0.0" y="510" width="393" height="293"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="293" id="Eb7-cN-fzZ"/>
+                                </constraints>
+                                <inset key="scrollIndicatorInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableCell" id="CS4-jW-oND">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CS4-jW-oND" id="iaY-Ya-Lxt">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="wxp-sd-tCu"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5rx-Il-gwc"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1l-Lc-CV1">
+                                <rect key="frame" x="10" y="476.66666666666669" width="80" height="25.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Black" family="Merriweather" pointSize="20"/>
+                                <color key="textColor" name="customMerriBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PBx-YN-19I"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aQa-Lg-aAM" firstAttribute="leading" secondItem="PBx-YN-19I" secondAttribute="leading" constant="10" id="BtZ-Zj-JIg"/>
+                            <constraint firstItem="Nbx-zQ-0nL" firstAttribute="top" secondItem="PBx-YN-19I" secondAttribute="top" constant="28.666666666666629" id="LJL-hp-I6h"/>
+                            <constraint firstItem="aQa-Lg-aAM" firstAttribute="leading" secondItem="b1l-Lc-CV1" secondAttribute="leading" id="TqU-oH-W5R"/>
+                            <constraint firstAttribute="trailing" secondItem="Nbx-zQ-0nL" secondAttribute="trailing" id="cmK-VN-FxS"/>
+                            <constraint firstItem="Nbx-zQ-0nL" firstAttribute="leading" secondItem="aYn-Zj-7Gs" secondAttribute="leading" id="hZL-js-z4C"/>
+                            <constraint firstItem="aYn-Zj-7Gs" firstAttribute="bottom" secondItem="PBx-YN-19I" secondAttribute="bottom" id="hkr-bi-cEY"/>
+                            <constraint firstItem="Nbx-zQ-0nL" firstAttribute="trailing" secondItem="aYn-Zj-7Gs" secondAttribute="trailing" id="lAV-T3-dji"/>
+                            <constraint firstItem="Nbx-zQ-0nL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nzU-e9-fJB"/>
+                            <constraint firstItem="b1l-Lc-CV1" firstAttribute="top" secondItem="Nbx-zQ-0nL" secondAttribute="bottom" constant="7.3333333333333712" id="rMe-Oc-WsD"/>
+                            <constraint firstItem="aQa-Lg-aAM" firstAttribute="top" secondItem="PBx-YN-19I" secondAttribute="top" id="sof-b8-aRo"/>
+                            <constraint firstItem="aYn-Zj-7Gs" firstAttribute="top" secondItem="b1l-Lc-CV1" secondAttribute="bottom" constant="8" symbolic="YES" id="xEN-Ve-kgE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="afN-4R-Vn6"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Nbx-zQ-0nL" id="eYx-oh-tzu"/>
+                        <outlet property="tableView" destination="aYn-Zj-7Gs" id="b8s-oY-iQ8"/>
+                        <segue destination="TUj-WP-IHP" kind="presentation" identifier="toDetail" id="aPW-Fa-D9F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1642" y="-830"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="4Cf-NU-tMz">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TUj-WP-IHP" customClass="DetailViewController" customModule="booksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lld-5v-Ffd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="t3J-6Q-6EB">
+                                <rect key="frame" x="30" y="405.66666666666669" width="275.33333333333331" height="44"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="I9B-Jl-shO">
+                                        <rect key="frame" x="0.0" y="0.0" width="36.666666666666664" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fl-A4-w4O">
+                                                <rect key="frame" x="0.0" y="0.0" width="36.666666666666664" height="16.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="14"/>
+                                                <color key="textColor" name="customMulish"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyb-ew-bCf">
+                                                <rect key="frame" x="0.0" y="26.333333333333314" width="36.666666666666664" height="17.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="14"/>
+                                                <color key="textColor" name="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9oJ-wK-VwA">
+                                        <rect key="frame" x="106.66666666666666" y="0.0" width="62" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fe2-BE-J9d">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="16.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="14"/>
+                                                <color key="textColor" name="customMulish"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdL-7j-yoA">
+                                                <rect key="frame" x="0.0" y="26.333333333333314" width="62" height="17.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="14"/>
+                                                <color key="textColor" name="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u5s-XR-CtJ">
+                                        <rect key="frame" x="238.66666666666666" y="0.0" width="36.666666666666657" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tzk-8G-3Lx">
+                                                <rect key="frame" x="0.0" y="0.0" width="36.666666666666664" height="16.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="14"/>
+                                                <color key="textColor" name="customMulish"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8E-du-SVa">
+                                                <rect key="frame" x="0.0" y="26.333333333333314" width="36.666666666666664" height="17.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="14"/>
+                                                <color key="textColor" name="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mehmet Akif Ersoy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEa-eD-0CM">
+                                <rect key="frame" x="120" y="351.33333333333331" width="166" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Mulish-SemiBold" family="Mulish" pointSize="16"/>
+                                <color key="textColor" name="customMulish"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notImage" translatesAutoresizingMaskIntoConstraints="NO" id="YcD-Qy-5eA">
+                                <rect key="frame" x="108" y="66" width="176" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="LHd-rT-hBN"/>
+                                    <constraint firstAttribute="width" constant="176" id="edm-0c-hzY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spiderman: No Way Home" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxn-57-pkB">
+                                <rect key="frame" x="47" y="306" width="299" height="25.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Black" family="Merriweather" pointSize="20"/>
+                                <color key="textColor" name="customMerriBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q0Z-kk-qfr">
+                                <rect key="frame" x="25" y="505" width="343" height="327"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" name="textColor"/>
+                                <fontDescription key="fontDescription" name="Mulish-SemiBold" family="Mulish" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5R-ji-fCc">
+                                <rect key="frame" x="29.999999999999996" y="469.66666666666669" width="60.666666666666657" height="25.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Black" family="Merriweather" pointSize="20"/>
+                                <color key="textColor" name="customMerriBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VG-n3-HY7">
+                                <rect key="frame" x="326" y="351.33333333333331" width="51" height="34.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="vcO-b4-ib2"/>
+                                </constraints>
+                                <color key="tintColor" name="backgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="heart" catalog="system">
+                                    <color key="baseForegroundColor" name="customMerriBlue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="detailFavBtn:" destination="TUj-WP-IHP" eventType="touchUpInside" id="Uz7-tJ-2Tb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yjb-Q3-Ngb"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0VG-n3-HY7" firstAttribute="top" secondItem="rxn-57-pkB" secondAttribute="bottom" constant="20" id="2NI-lm-rkF"/>
+                            <constraint firstItem="q0Z-kk-qfr" firstAttribute="leading" secondItem="Yjb-Q3-Ngb" secondAttribute="leading" constant="25" id="4Pj-nV-7Qa"/>
+                            <constraint firstItem="rxn-57-pkB" firstAttribute="top" secondItem="YcD-Qy-5eA" secondAttribute="bottom" constant="20" id="A9J-8K-Npt"/>
+                            <constraint firstItem="H5R-ji-fCc" firstAttribute="leading" secondItem="Yjb-Q3-Ngb" secondAttribute="leading" constant="30" id="Au1-Cy-zM8"/>
+                            <constraint firstItem="rxn-57-pkB" firstAttribute="leading" secondItem="Yjb-Q3-Ngb" secondAttribute="leading" constant="47" id="B21-H8-csw"/>
+                            <constraint firstItem="q0Z-kk-qfr" firstAttribute="top" secondItem="H5R-ji-fCc" secondAttribute="bottom" constant="10" id="D8P-n2-5ej"/>
+                            <constraint firstItem="Yjb-Q3-Ngb" firstAttribute="trailing" secondItem="YcD-Qy-5eA" secondAttribute="trailing" constant="109" id="Fox-FZ-QKx"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="q0Z-kk-qfr" secondAttribute="bottom" constant="10" id="N32-CO-KeX"/>
+                            <constraint firstItem="YcD-Qy-5eA" firstAttribute="leading" secondItem="Yjb-Q3-Ngb" secondAttribute="leading" constant="108" id="QJ8-8n-Bwd"/>
+                            <constraint firstItem="H5R-ji-fCc" firstAttribute="top" secondItem="t3J-6Q-6EB" secondAttribute="bottom" constant="20" id="QqW-47-oNm"/>
+                            <constraint firstItem="rxn-57-pkB" firstAttribute="centerX" secondItem="Lld-5v-Ffd" secondAttribute="centerX" id="SB1-wE-aIv"/>
+                            <constraint firstItem="YcD-Qy-5eA" firstAttribute="top" secondItem="Yjb-Q3-Ngb" secondAttribute="top" constant="66" id="XUj-eu-IIY"/>
+                            <constraint firstItem="aEa-eD-0CM" firstAttribute="top" secondItem="rxn-57-pkB" secondAttribute="bottom" constant="20" id="b6Z-e8-6xE"/>
+                            <constraint firstItem="0VG-n3-HY7" firstAttribute="trailing" secondItem="Lld-5v-Ffd" secondAttribute="trailingMargin" id="dZz-gC-l9r"/>
+                            <constraint firstItem="t3J-6Q-6EB" firstAttribute="top" secondItem="0VG-n3-HY7" secondAttribute="bottom" constant="20" id="gOI-R3-5mH"/>
+                            <constraint firstItem="Yjb-Q3-Ngb" firstAttribute="trailing" secondItem="q0Z-kk-qfr" secondAttribute="trailing" constant="25" id="hwP-iS-VVO"/>
+                            <constraint firstItem="0VG-n3-HY7" firstAttribute="leading" secondItem="aEa-eD-0CM" secondAttribute="trailing" constant="40" id="ktl-7P-bjl"/>
+                            <constraint firstItem="t3J-6Q-6EB" firstAttribute="leading" secondItem="Yjb-Q3-Ngb" secondAttribute="leading" constant="30" id="ptZ-gf-bxZ"/>
+                            <constraint firstItem="aEa-eD-0CM" firstAttribute="leading" secondItem="Yjb-Q3-Ngb" secondAttribute="leading" constant="120" id="w6j-XQ-fW0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KoJ-a3-Zb6"/>
+                    <connections>
+                        <outlet property="detailAboutTextView" destination="q0Z-kk-qfr" id="E6Y-di-AJu"/>
+                        <outlet property="detailAuthorLabel" destination="aEa-eD-0CM" id="WLN-v7-Q7D"/>
+                        <outlet property="detailFavBtn" destination="0VG-n3-HY7" id="8YC-9Z-J0z"/>
+                        <outlet property="detailImageView" destination="YcD-Qy-5eA" id="aCk-BI-7qS"/>
+                        <outlet property="detailLanguageLabel" destination="vdL-7j-yoA" id="RUk-1x-ree"/>
+                        <outlet property="detailPageCountLabel" destination="nyb-ew-bCf" id="pSZ-Uo-hHa"/>
+                        <outlet property="detailPublishedDateLabel" destination="e8E-du-SVa" id="NtO-nz-Y6p"/>
+                        <outlet property="detailTitleLabel" destination="rxn-57-pkB" id="Czu-N2-XGF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5dt-LC-8w3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-477" y="-384"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="CPZ-gs-f8Q">
+            <objects>
+                <viewController id="sjK-0V-Hb2" customClass="RegisterViewController" customModule="booksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jz1-2j-Q1L">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="cll-4h-Syg">
+                                <rect key="frame" x="30" y="240.33333333333337" width="325" height="312"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qbT-16-Ugt">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="50"/>
+                                        <color key="backgroundColor" name="backgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="325" id="BrD-HZ-GWy"/>
+                                            <constraint firstAttribute="height" constant="50" id="PT9-ci-Y4O"/>
+                                        </constraints>
+                                        <color key="textColor" name="textColor"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGd-Fb-Pqw">
+                                        <rect key="frame" x="0.0" y="83.999999999999972" width="325" height="50"/>
+                                        <color key="backgroundColor" name="backgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="325" id="f1G-a9-5A0"/>
+                                            <constraint firstAttribute="height" constant="50" id="iGN-Nc-tDa"/>
+                                        </constraints>
+                                        <color key="textColor" name="textColor"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password Repeat" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B56-CC-qCc">
+                                        <rect key="frame" x="0.0" y="167.99999999999997" width="325" height="50"/>
+                                        <color key="backgroundColor" name="backgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="AA8-Y8-HwK"/>
+                                            <constraint firstAttribute="width" constant="325" id="INL-26-STu"/>
+                                        </constraints>
+                                        <color key="textColor" name="textColor"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbd-xC-5qu">
+                                        <rect key="frame" x="0.0" y="252" width="325" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="HLm-WH-BDW"/>
+                                            <constraint firstAttribute="width" constant="325" id="zZK-tF-9Ab"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Register">
+                                            <fontDescription key="titleFontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="20"/>
+                                            <color key="baseForegroundColor" name="backgroundColor"/>
+                                            <color key="baseBackgroundColor" name="customMerriBlue"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="registerBtn:" destination="sjK-0V-Hb2" eventType="touchUpInside" id="rnW-E0-NdS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVq-j3-2jt">
+                                <rect key="frame" x="34" y="140" width="108" height="25.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Black" family="Merriweather" pointSize="20"/>
+                                <color key="textColor" name="customMerriBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e1H-jY-C6B"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cll-4h-Syg" firstAttribute="leading" secondItem="e1H-jY-C6B" secondAttribute="leading" constant="30" id="OAQ-Kd-2im"/>
+                            <constraint firstItem="aVq-j3-2jt" firstAttribute="top" secondItem="e1H-jY-C6B" secondAttribute="top" constant="140" id="T0y-VP-fpr"/>
+                            <constraint firstItem="aVq-j3-2jt" firstAttribute="leading" secondItem="e1H-jY-C6B" secondAttribute="leading" constant="34" id="hk8-Gv-k6N"/>
+                            <constraint firstItem="cll-4h-Syg" firstAttribute="top" secondItem="aVq-j3-2jt" secondAttribute="bottom" constant="75" id="iYE-5Q-sco"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTxt" destination="qbT-16-Ugt" id="KVC-ej-a46"/>
+                        <outlet property="passwordRepeatTxt" destination="B56-CC-qCc" id="rZC-We-Hsq"/>
+                        <outlet property="passwordTxt" destination="eGd-Fb-Pqw" id="kWE-aZ-Hrl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZyQ-OT-FJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4469" y="541"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="bug-FA-19t">
+            <objects>
+                <viewController id="tZn-8Q-bMC" customClass="VideoViewController" customModule="booksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d1u-pi-Kxa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bPJ-kM-yfF"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <segue destination="Zli-Nh-flO" kind="presentation" identifier="toUser" modalPresentationStyle="fullScreen" id="B6C-cf-qw8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JVP-fZ-CCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5314" y="-196"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="dxZ-SU-0Zk">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zli-Nh-flO" customClass="LoginViewController" customModule="booksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hFa-At-hyL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to BookShelf 👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srC-jw-eni">
+                                <rect key="frame" x="30" y="140" width="256.66666666666669" height="25.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Black" family="Merriweather" pointSize="20"/>
+                                <color key="textColor" name="customMerriBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-LU-lWN">
+                                <rect key="frame" x="30" y="240.33333333333337" width="325" height="214"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h8W-Z9-WP9">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="50"/>
+                                        <color key="backgroundColor" name="backgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="325" id="BaN-uP-WFD"/>
+                                            <constraint firstAttribute="height" constant="50" id="fRc-64-38k"/>
+                                        </constraints>
+                                        <color key="textColor" name="textColor"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YnA-XF-n8g">
+                                        <rect key="frame" x="0.0" y="76.999999999999972" width="325" height="50"/>
+                                        <color key="backgroundColor" name="backgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="325" id="8ND-iU-dMY"/>
+                                            <constraint firstAttribute="height" constant="50" id="Cea-eE-1C8"/>
+                                        </constraints>
+                                        <color key="textColor" name="textColor"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMp-r5-w9r">
+                                        <rect key="frame" x="0.0" y="153.99999999999997" width="325" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="325" id="aKs-Sp-9OQ"/>
+                                            <constraint firstAttribute="height" constant="60" id="ueF-WP-nIJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Login">
+                                            <fontDescription key="titleFontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="20"/>
+                                            <color key="baseForegroundColor" name="backgroundColor"/>
+                                            <color key="baseBackgroundColor" name="customMerriBlue"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginBtn:" destination="Zli-Nh-flO" eventType="touchUpInside" id="0b9-sx-Vtj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Fv-sS-W8I">
+                                <rect key="frame" x="30" y="519.33333333333337" width="316" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account ? " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ls-Y8-HF2">
+                                        <rect key="frame" x="0.0" y="0.0" width="234" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="234" id="7E5-n0-nZ1"/>
+                                            <constraint firstAttribute="height" constant="40" id="twu-mU-EYs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="18"/>
+                                        <color key="textColor" name="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUw-ub-dMb">
+                                        <rect key="frame" x="234" y="0.0" width="82" height="40"/>
+                                        <color key="backgroundColor" name="customMerriBlue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="82" id="sKa-uh-efr"/>
+                                            <constraint firstAttribute="height" constant="40" id="ziR-5S-4gY"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sign in">
+                                            <fontDescription key="titleFontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="16"/>
+                                            <color key="baseForegroundColor" name="backgroundColor"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="sjK-0V-Hb2" kind="presentation" identifier="toRegister" id="gjh-pC-xUt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="o0j-OI-nlh"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="srC-jw-eni" firstAttribute="leading" secondItem="o0j-OI-nlh" secondAttribute="leading" constant="30" id="6Ba-hZ-ONh"/>
+                            <constraint firstItem="Ugd-LU-lWN" firstAttribute="leading" secondItem="o0j-OI-nlh" secondAttribute="leading" constant="30" id="UDY-1A-I4U"/>
+                            <constraint firstItem="srC-jw-eni" firstAttribute="top" secondItem="o0j-OI-nlh" secondAttribute="top" constant="140" id="h1Q-ny-PfE"/>
+                            <constraint firstItem="Ugd-LU-lWN" firstAttribute="top" secondItem="srC-jw-eni" secondAttribute="bottom" constant="75" id="tPZ-iO-Jqd"/>
+                            <constraint firstItem="9Fv-sS-W8I" firstAttribute="leading" secondItem="o0j-OI-nlh" secondAttribute="leading" constant="30" id="y0j-sy-y8S"/>
+                            <constraint firstItem="9Fv-sS-W8I" firstAttribute="top" secondItem="Ugd-LU-lWN" secondAttribute="bottom" constant="65" id="y8k-K1-IWI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zeB-vo-GLx"/>
+                    <connections>
+                        <outlet property="emailTxt" destination="h8W-Z9-WP9" id="nX4-oh-Kgr"/>
+                        <outlet property="passwordTxt" destination="YnA-XF-n8g" id="S9L-5E-JMA"/>
+                        <segue destination="75A-PO-gqJ" kind="presentation" identifier="toMain" modalPresentationStyle="fullScreen" id="YKc-cb-wAH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TnW-iH-lZz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4469" y="-196"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8ms-xM-2Sc">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="75A-PO-gqJ" customClass="TabBarController" customModule="booksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FjM-gq-MOY"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jrg-MR-ViG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <color key="tintColor" name="customMerriBlue"/>
+                        <color key="barTintColor" name="backgroundColor"/>
+                        <color key="selectedImageTintColor" name="customMerriBlue"/>
+                        <tabBarAppearance key="standardAppearance" backgroundEffect="regular">
+                            <color key="backgroundColor" name="customMerriBlue"/>
+                            <color key="shadowColor" name="customMerriBlue"/>
+                            <color key="selectionIndicatorTintColor" name="customMerriBlue"/>
+                        </tabBarAppearance>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="4"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="abS-iX-0ar" kind="relationship" relationship="viewControllers" id="kaF-85-rEm"/>
+                        <segue destination="x2N-VY-iDd" kind="relationship" relationship="viewControllers" id="HQS-5H-gGn"/>
+                        <segue destination="9cV-iR-q7D" kind="relationship" relationship="viewControllers" id="dlP-zX-oNz"/>
+                        <segue destination="HXO-Re-COm" kind="relationship" relationship="viewControllers" id="ZKe-yK-Gxc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k4R-5d-OtG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3674" y="-196"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lve-eu-hGD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="abS-iX-0ar" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="book" catalog="system" id="tfp-Az-7HJ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8VS-Rm-5zS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jAy-ME-Rvb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12n-gl-3QY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2592" y="-830"/>
+        </scene>
+        <!--Search for a Book-->
+        <scene sceneID="frC-R5-RXY">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="840-1G-VSZ" customClass="SearchViewController" customModule="booksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Qr-bd-lDH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cm9-od-14M">
+                                <rect key="frame" x="-5" y="44" width="398" height="60"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZVr-yh-fhH">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="398" id="2Dc-5U-2bi"/>
+                                            <constraint firstAttribute="height" constant="60" id="feX-k8-DvB"/>
+                                        </constraints>
+                                        <color key="tintColor" name="customMerriBlue"/>
+                                        <color key="barTintColor" name="backgroundColor"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="840-1G-VSZ" id="6b5-aO-2QZ"/>
+                                        </connections>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ZVr-yh-fhH" firstAttribute="top" secondItem="cm9-od-14M" secondAttribute="top" id="3ib-7h-4Li"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZVr-yh-fhH" secondAttribute="trailing" id="Bgw-we-zEG"/>
+                                    <constraint firstItem="ZVr-yh-fhH" firstAttribute="leading" secondItem="cm9-od-14M" secondAttribute="leading" id="FO0-Ck-j7k"/>
+                                    <constraint firstAttribute="width" constant="398" id="FYN-eS-7CM"/>
+                                    <constraint firstAttribute="height" constant="60" id="XVE-Hp-d24"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZVr-yh-fhH" secondAttribute="bottom" id="nMX-wC-jqJ"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZiS-mM-EOq">
+                                <rect key="frame" x="0.0" y="104" width="393" height="699"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" rowHeight="130" id="oMq-dC-epr" customClass="TableViewCell" customModule="booksApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oMq-dC-epr" id="iet-nP-QrT">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="130"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="840-1G-VSZ" id="YMT-ic-bHP"/>
+                                    <outlet property="delegate" destination="840-1G-VSZ" id="Y98-oN-3Mh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t4w-hB-q4a"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t4w-hB-q4a" firstAttribute="trailing" secondItem="ZiS-mM-EOq" secondAttribute="trailing" id="AeA-yW-1fk"/>
+                            <constraint firstAttribute="trailing" secondItem="cm9-od-14M" secondAttribute="trailing" id="S2T-pP-ury"/>
+                            <constraint firstItem="t4w-hB-q4a" firstAttribute="bottom" secondItem="ZiS-mM-EOq" secondAttribute="bottom" id="YEx-PE-HJa"/>
+                            <constraint firstItem="cm9-od-14M" firstAttribute="top" secondItem="t4w-hB-q4a" secondAttribute="top" id="aja-Cz-0rv"/>
+                            <constraint firstItem="ZiS-mM-EOq" firstAttribute="leading" secondItem="t4w-hB-q4a" secondAttribute="leading" id="av0-qE-R1U"/>
+                            <constraint firstItem="cm9-od-14M" firstAttribute="top" secondItem="t4w-hB-q4a" secondAttribute="top" id="dlg-GU-LRU"/>
+                            <constraint firstItem="ZiS-mM-EOq" firstAttribute="top" secondItem="cm9-od-14M" secondAttribute="bottom" id="exA-fg-pqQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search for a Book" id="QsL-iJ-KY6"/>
+                    <connections>
+                        <outlet property="booksSearchBar" destination="ZVr-yh-fhH" id="wbS-Nu-XNW"/>
+                        <outlet property="searchTableView" destination="ZiS-mM-EOq" id="j0P-Ah-ESU"/>
+                        <segue destination="TUj-WP-IHP" kind="presentation" identifier="toDetail2" id="bVw-Q5-RbO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Xf-LI-xoW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1644" y="-149"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0YM-YC-pdN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x2N-VY-iDd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass.circle" catalog="system" id="xEa-Wp-TTH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DQp-AS-h2a">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="840-1G-VSZ" kind="relationship" relationship="rootViewController" id="FnD-Uc-N2r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R3c-1E-EsE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2593" y="-149"/>
+        </scene>
+        <!--User View Controller-->
+        <scene sceneID="bMm-x2-YdY">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="dZ0-dm-Sf7" customClass="UserViewController" customModule="booksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jXt-HS-7kx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItS-3x-LM1">
+                                <rect key="frame" x="30" y="44" width="177.66666666666666" height="25.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Black" family="Merriweather" pointSize="20"/>
+                                <color key="textColor" name="customMerriBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="PA2-Nh-eWR">
+                                <rect key="frame" x="30" y="124.33333333333331" width="325" height="387"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="wD8-nK-my3">
+                                        <rect key="frame" x="0.0" y="0.0" width="253.66666666666666" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hB3-kF-MkL">
+                                                <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="31"/>
+                                                <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Y56-fu-VUD">
+                                                <rect key="frame" x="204.66666666666666" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="darkModeSwitch:" destination="dZ0-dm-Sf7" eventType="valueChanged" id="Y1T-bN-ArZ"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email ;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xk7-yl-aq2">
+                                        <rect key="frame" x="0.0" y="71.000000000000014" width="63.333333333333336" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="20"/>
+                                        <color key="textColor" name="customMerriBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fj5-rs-kAi">
+                                        <rect key="frame" x="0.0" y="136.33333333333337" width="46.333333333333336" height="22.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="Mulish-SemiBold" family="Mulish" pointSize="18"/>
+                                        <color key="textColor" name="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of registration ;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajy-Ba-Aw9">
+                                        <rect key="frame" x="0.0" y="199" width="197.33333333333334" height="25.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="20"/>
+                                        <color key="textColor" name="customMerriBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHe-gi-8Fn">
+                                        <rect key="frame" x="0.0" y="264.33333333333337" width="46.333333333333336" height="22.666666666666686"/>
+                                        <fontDescription key="fontDescription" name="Mulish-SemiBold" family="Mulish" pointSize="18"/>
+                                        <color key="textColor" name="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wa-ex-cPa">
+                                        <rect key="frame" x="0.0" y="327" width="325" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="U16-uW-Qdd"/>
+                                            <constraint firstAttribute="width" constant="325" id="mbP-bu-0Yt"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Log Out">
+                                            <fontDescription key="titleFontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="20"/>
+                                            <color key="baseForegroundColor" name="backgroundColor"/>
+                                            <color key="baseBackgroundColor" name="customMerriBlue"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="logoutBtn:" destination="dZ0-dm-Sf7" eventType="touchUpInside" id="hI3-R3-8oQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KvT-Qn-8Af"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PA2-Nh-eWR" firstAttribute="top" secondItem="ItS-3x-LM1" secondAttribute="bottom" constant="55" id="BIB-Sr-hQ5"/>
+                            <constraint firstItem="ItS-3x-LM1" firstAttribute="leading" secondItem="KvT-Qn-8Af" secondAttribute="leading" constant="30" id="MWX-Oa-OnA"/>
+                            <constraint firstItem="ItS-3x-LM1" firstAttribute="top" secondItem="jXt-HS-7kx" secondAttribute="topMargin" id="WDJ-ej-Na3"/>
+                            <constraint firstItem="PA2-Nh-eWR" firstAttribute="leading" secondItem="KvT-Qn-8Af" secondAttribute="leading" constant="30" id="bsL-wZ-zXd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Exh-p6-p18"/>
+                    <connections>
+                        <outlet property="dateLbl" destination="LHe-gi-8Fn" id="i5t-85-oUw"/>
+                        <outlet property="emailLbl" destination="fj5-rs-kAi" id="05V-P5-mDi"/>
+                        <segue destination="Zli-Nh-flO" kind="presentation" identifier="toLogin" modalPresentationStyle="fullScreen" id="2wF-E8-BAD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8C-xF-P9J" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2850" y="541"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vAZ-0h-ivc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HXO-Re-COm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="person.circle" catalog="system" id="X79-Ep-QxC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t5d-fs-2Oq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dZ0-dm-Sf7" kind="relationship" relationship="rootViewController" id="lef-cg-1gi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LyO-fI-sgk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3674" y="541"/>
+        </scene>
+        <!--Favorite View Controller-->
+        <scene sceneID="XjJ-Az-Nqk">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="TJh-3b-vEI" customClass="FavoriteViewController" customModule="booksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2eS-qv-H1F">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hZ-0V-qt3">
+                                <rect key="frame" x="10" y="44" width="61" height="25.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Black" family="Merriweather" pointSize="20"/>
+                                <color key="textColor" name="customMerriBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZFh-hu-hOm">
+                                <rect key="frame" x="0.0" y="69.333333333333314" width="393" height="733.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="hz6-SJ-7LR">
+                                    <size key="itemSize" width="176" height="293"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="favCell" id="Hwg-LE-iwq" customClass="FavCollectionViewCell" customModule="booksApp" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="0.0" width="176" height="293"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="73u-cN-z24">
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="293"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="TJh-3b-vEI" id="Dh1-vU-ZWm"/>
+                                    <outlet property="delegate" destination="TJh-3b-vEI" id="iQU-ug-8tL"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zkT-CO-MWl"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2hZ-0V-qt3" firstAttribute="top" secondItem="zkT-CO-MWl" secondAttribute="top" id="4In-Vw-RrF"/>
+                            <constraint firstItem="zkT-CO-MWl" firstAttribute="bottom" secondItem="ZFh-hu-hOm" secondAttribute="bottom" id="MQH-bP-K4q"/>
+                            <constraint firstItem="2hZ-0V-qt3" firstAttribute="leading" secondItem="zkT-CO-MWl" secondAttribute="leading" constant="10" id="R9v-oe-9Kd"/>
+                            <constraint firstItem="ZFh-hu-hOm" firstAttribute="top" secondItem="2hZ-0V-qt3" secondAttribute="bottom" id="kG5-gE-leM"/>
+                            <constraint firstItem="ZFh-hu-hOm" firstAttribute="leading" secondItem="zkT-CO-MWl" secondAttribute="leading" id="mhT-xD-MeH"/>
+                            <constraint firstItem="zkT-CO-MWl" firstAttribute="trailing" secondItem="ZFh-hu-hOm" secondAttribute="trailing" id="tnL-12-iob"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9oC-UM-1y1"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ZFh-hu-hOm" id="TGU-Hx-mgw"/>
+                        <segue destination="TUj-WP-IHP" kind="presentation" identifier="toDetail3" id="6rQ-an-AET"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8EE-HR-eMB" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1295" y="541"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ovh-to-Jty">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9cV-iR-q7D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="heart.circle" catalog="system" id="PxR-5t-jbJ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Imw-zt-B3L">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TJh-3b-vEI" kind="relationship" relationship="rootViewController" id="eCZ-of-Yhc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SHu-vm-7YP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2069" y="541"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2wF-E8-BAD"/>
+        <segue reference="aPW-Fa-D9F"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="heart.circle" catalog="system" width="128" height="123"/>
+        <image name="magnifyingglass.circle" catalog="system" width="128" height="123"/>
+        <image name="notImage" width="1205" height="1843"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
+        <namedColor name="backgroundColor">
+            <color red="0.99000000953674316" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="customMerriBlue">
+            <color red="0.067000001668930054" green="0.054999999701976776" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="customMulish">
+            <color white="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <namedColor name="textColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

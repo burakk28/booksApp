@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mulish-Bold.ttf">
+            <string>Mulish-Bold</string>
+        </array>
+        <array key="Mulish-SemiBold.ttf">
+            <string>Mulish-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="booksApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="143" height="283"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="143" height="283"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eDt-bH-uHd">
+                        <rect key="frame" x="0.0" y="0.0" width="143" height="283"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="9oi-ee-NTu">
+                                <rect key="frame" x="0.0" y="0.0" width="143" height="283"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tel1" translatesAutoresizingMaskIntoConstraints="NO" id="7hX-2h-Q5R">
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="212"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="143" id="5dS-FW-MWH"/>
+                                            <constraint firstAttribute="height" constant="212" id="fn6-sX-2oJ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bL6-s4-Xxy">
+                                        <rect key="frame" x="0.0" y="218" width="42" height="41.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="16"/>
+                                        <color key="textColor" name="customMerriBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UHQ-gu-7E5">
+                                        <rect key="frame" x="0.0" y="265.33333333333331" width="36" height="17.666666666666686"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G9c-mU-9eD">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="17.666666666666668"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9D-3E-mVe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="36" height="17.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Mulish-SemiBold" family="Mulish" pointSize="14"/>
+                                                        <color key="textColor" name="customMulish"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="283" id="Q7s-rx-H7q"/>
+                                    <constraint firstAttribute="width" constant="143" id="Y6a-aQ-W0I"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="183" height="228"/>
+            <connections>
+                <outlet property="collectionAuthorsLabel" destination="V9D-3E-mVe" id="vSH-br-sod"/>
+                <outlet property="collectionImageView" destination="7hX-2h-Q5R" id="cCJ-I5-t68"/>
+                <outlet property="collectionTitleLabel" destination="bL6-s4-Xxy" id="y33-yf-dxI"/>
+            </connections>
+            <point key="canvasLocation" x="115.26717557251908" y="-1.7605633802816902"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="tel1" width="550" height="550"/>
+        <namedColor name="customMerriBlue">
+            <color red="0.067000001668930054" green="0.054999999701976776" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="customMulish">
+            <color white="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

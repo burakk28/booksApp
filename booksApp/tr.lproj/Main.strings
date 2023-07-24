@@ -1,0 +1,111 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0VG-n3-HY7"; */
+"0VG-n3-HY7.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Page"; ObjectID = "1Fl-A4-w4O"; */
+"1Fl-A4-w4O.text" = "Page";
+
+/* Class = "UILabel"; text = "Already have an account ? "; ObjectID = "1Ls-Y8-HF2"; */
+"1Ls-Y8-HF2.text" = "Already have an account ? ";
+
+/* Class = "UILabel"; text = "Loved"; ObjectID = "2hZ-0V-qt3"; */
+"2hZ-0V-qt3.text" = "Loved";
+
+/* Class = "UIButton"; configuration.title = "Log Out"; ObjectID = "6Wa-ex-cPa"; */
+"6Wa-ex-cPa.configuration.title" = "Log Out";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6Wa-ex-cPa"; */
+"6Wa-ex-cPa.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Date of registration ;"; ObjectID = "Ajy-Ba-Aw9"; */
+"Ajy-Ba-Aw9.text" = "Date of registration ;";
+
+/* Class = "UITextField"; placeholder = "Password Repeat"; ObjectID = "B56-CC-qCc"; */
+"B56-CC-qCc.placeholder" = "Password Repeat";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "H5R-ji-fCc"; */
+"H5R-ji-fCc.text" = "About";
+
+/* Class = "UILabel"; text = "User Information"; ObjectID = "ItS-3x-LM1"; */
+"ItS-3x-LM1.text" = "User Information";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LHe-gi-8Fn"; */
+"LHe-gi-8Fn.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Search for a Book"; ObjectID = "QsL-iJ-KY6"; */
+"QsL-iJ-KY6.title" = "Search for a Book";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "Tzk-8G-3Lx"; */
+"Tzk-8G-3Lx.text" = "Date";
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "VMp-r5-w9r"; */
+"VMp-r5-w9r.configuration.title" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "VMp-r5-w9r"; */
+"VMp-r5-w9r.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Register"; ObjectID = "Wbd-xC-5qu"; */
+"Wbd-xC-5qu.configuration.title" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Wbd-xC-5qu"; */
+"Wbd-xC-5qu.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "YnA-XF-n8g"; */
+"YnA-XF-n8g.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Mehmet Akif Ersoy"; ObjectID = "aEa-eD-0CM"; */
+"aEa-eD-0CM.text" = "Mehmet Akif Ersoy";
+
+/* Class = "UILabel"; text = "Newest"; ObjectID = "aQa-Lg-aAM"; */
+"aQa-Lg-aAM.text" = "Newest";
+
+/* Class = "UILabel"; text = "Register👋"; ObjectID = "aVq-j3-2jt"; */
+"aVq-j3-2jt.text" = "Register👋";
+
+/* Class = "UILabel"; text = "Popular"; ObjectID = "b1l-Lc-CV1"; */
+"b1l-Lc-CV1.text" = "Popular";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "e8E-du-SVa"; */
+"e8E-du-SVa.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "eGd-Fb-Pqw"; */
+"eGd-Fb-Pqw.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "fe2-BE-J9d"; */
+"fe2-BE-J9d.text" = "Language";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fj5-rs-kAi"; */
+"fj5-rs-kAi.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "h8W-Z9-WP9"; */
+"h8W-Z9-WP9.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Dark Mode"; ObjectID = "hB3-kF-MkL"; */
+"hB3-kF-MkL.text" = "Dark Mode";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nyb-ew-bCf"; */
+"nyb-ew-bCf.text" = "Label";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "q0Z-kk-qfr"; */
+"q0Z-kk-qfr.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "qbT-16-Ugt"; */
+"qbT-16-Ugt.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Spiderman: No Way Home"; ObjectID = "rxn-57-pkB"; */
+"rxn-57-pkB.text" = "Spiderman: No Way Home";
+
+/* Class = "UILabel"; text = "Welcome to BookShelf 👋"; ObjectID = "srC-jw-eni"; */
+"srC-jw-eni.text" = "Welcome to BookShelf 👋";
+
+/* Class = "UIButton"; configuration.title = "Sign in"; ObjectID = "uUw-ub-dMb"; */
+"uUw-ub-dMb.configuration.title" = "Sign in";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uUw-ub-dMb"; */
+"uUw-ub-dMb.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vdL-7j-yoA"; */
+"vdL-7j-yoA.text" = "Label";
+
+/* Class = "UILabel"; text = "Email ;"; ObjectID = "xk7-yl-aq2"; */
+"xk7-yl-aq2.text" = "Email ;";
